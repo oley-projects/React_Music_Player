@@ -1,7 +1,8 @@
 import { v4 as uuidv4 } from "uuid";
 
 function chillHop() {
-    return [
+  return (
+    [
       {
         name: "Two Thousand Miles",
         cover:
@@ -142,7 +143,8 @@ function chillHop() {
         id: uuidv4(),
         active: false,
       },
-    ];
-  }
-  
-  export default chillHop;
+    ]
+  );
+}
+
+export default chillHop;
