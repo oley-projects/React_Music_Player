@@ -1,12 +1,11 @@
 import { useState, useRef } from 'react';
 //Styles
 import './styles/app.scss';
-
 //Components
 import Player from "./components/Player"
 import Song from "./components/Song"
-import Library from './components/Library';
-
+import Library from "./components/Library";
+import Nav from "./components/Nav"
 //Database
 import data from "./data";
 
@@ -15,6 +14,7 @@ function App() {
   const [songs, setSongs] = useState(data());
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [libraryStatus, setLibraryStatus] = useState(false);
   //Ref
   const audioRef = useRef(null);
   const [songInfo, setSongInfo] = useState({
@@ -29,6 +29,7 @@ function App() {
   
   return (
     <div className="App">
+      <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song currentSong={currentSong} /> 
       <Player 
         isPlaying={isPlaying} 
@@ -44,6 +45,7 @@ function App() {
         audioRef={audioRef}
         isPlaying={isPlaying}
         setSongs={setSongs}
+        libraryStatus={libraryStatus}
       />
       <audio
         onTimeUpdate={timeUpdateHandler}

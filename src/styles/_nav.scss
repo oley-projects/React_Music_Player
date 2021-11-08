@@ -1,0 +1,22 @@
+nav {
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    button {
+        background-color: transparent;
+        border: 1px solid rgb(99, 99, 99);
+        border-radius: 0.1rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        transition: all 0.3s ease;
+        color: rgb(99, 99, 99);
+        &:hover {
+            background-color: rgb(99, 99, 99);
+            color: #fff;
+        }
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+}
