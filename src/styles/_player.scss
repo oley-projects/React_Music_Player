@@ -12,6 +12,9 @@
   input {
     width: 100%;
     padding: 1rem 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+    cursor: pointer;
   }
   p {
     padding: 1rem;
@@ -27,4 +30,36 @@
   svg {
     cursor: pointer;
   }
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.track {
+  transform: translateY(110%);
+  background-color: lightblue;
+  width: 100%;
+  height: 1rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.animated-track {
+  background-color: rgb(204, 204, 204);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(0%);
+  pointer-events: none;
 }
