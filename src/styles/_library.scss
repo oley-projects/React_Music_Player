@@ -38,6 +38,7 @@
   align-items: center;
   padding: 1rem 2rem;
   cursor: pointer;
+  transition: background-color 0.4s ease;
   img {
     width: 30%;
   }
@@ -58,9 +59,16 @@
 
 .selected {
   background-color: rgb(214, 246, 209);
+  transition: background-color 0.6s ease;
 }
 
 .active-library {
   transform: translateX(0);
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
 }

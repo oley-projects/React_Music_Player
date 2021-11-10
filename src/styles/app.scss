@@ -22,6 +22,14 @@ h4 {
     color: rgb(92, 92, 92);
 }
 
+.App {
+    transition: all 0.5s ease;
+}
+
+.library-active {
+    margin-left: 25%;
+}
+
 @import './song';
 @import './player';
 @import './library';
